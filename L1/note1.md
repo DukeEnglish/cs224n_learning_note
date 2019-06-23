@@ -145,6 +145,19 @@ http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
 
 link：http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/
 
+摘抄：
+
+Word2Vec implements a “subsampling” scheme to address this. For each word we encounter in our training text, there is a chance that we will effectively delete it from the text. The probability that we cut the word is related to the word’s frequency.
+
+1. Subsampling frequent words to decrease the number of training examples.
+2. Modifying the optimization objective with a technique they called “Negative Sampling”, which causes each training sample to update only a small percentage of the model’s weights.
+
+**negative sampling**
+
+**Negative sampling addresses this by having each training sample only modify a small percentage of the weights, rather than all of them. Here’s how it works.**
+
+
+
 
 
 ### softmax
@@ -153,9 +166,9 @@ link：http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampl
 
 http://ufldl.stanford.edu/tutorial/supervised/SoftmaxRegression/
 
+softmax是logistic regression的一般化，可以handle多分类问题。
 
-
-
+注意，在softmax里面，cost function那个小节说到了我们使用indicator function构造我们的cost function而不是使用直接的计算结果，所以，在计算求解的时候【理论是意义的，但是计算方式不同】，使用softmax进行二分类的时候会和直接使用sigmoid的结果有区别，理论上sigmoid更加精确（一个是使用计算出的误差，一个是真为1，假为0）
 
 ### 延伸：将word2vec应用在别的领域（推荐和广告）
 
@@ -167,15 +180,32 @@ http://mccormickml.com/2018/06/15/applying-word2vec-to-recommenders-and-advertis
 
 
 
-论文解读：
+### 论文解读：
 
 1. [Efficient Estimation of Word Representations in Vector Space](http://arxiv.org/pdf/1301.3781.pdf)(original word2vec paper) 
 
    link：
 
+   *This was the first paper, dated September 7th, 2013.*
+
+   *This paper introduces the Continuous Bag of Words (CBOW) and Skip-Gram models. However, don’t expect a particularly thorough description of these models in this paper…*
+
+   *I believe the reason for this is that these two new models are presented more as modifications to previously existing models for learning word vectors. Some of the terminology and concepts in this Word2Vec paper come from these past papers and are not redifined in Google’s paper.*
+
+   *A good example are the labels “projection layer” and “hidden layer” which come from the “NNLM” model. The term “projection layer” is used to refer to a middle layer of the neural network with no activation function, whereas “hidden layer” implies a non-linear activation.* (http://mccormickml.com/2016/04/27/word2vec-resources/)
+
 2. [Distributed Representations of Words and Phrases and their Compositionality](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) (negative sampling paper)
 
    link：
+
+   This paper adds a few more innovations which address the high compute cost of training the skip-gram model on a large dataset. These added tweaks are fundamental to the word2vec algorithm, and are implemented in Google’s C version as well as the Python implementation in `gensim`.
+
+   These innovations are:
+
+   1. Subsampling common words (that is, eliminating some training samples).
+   2. “Negative Sampling” - A modification of the optimization objective which causes each training sample to update only a small percentage of the model’s weights.
+
+   Additionally, they point out the value in recognizing common “phrases” and treating them as single words in the model (e.g., “United_States” or “New_York”).(http://mccormickml.com/2016/04/27/word2vec-resources/)
 
 ### Personal thoughts
 
@@ -184,3 +214,22 @@ http://mccormickml.com/2018/06/15/applying-word2vec-to-recommenders-and-advertis
 3. Cross-entropy
 4. stochastic gradient
 5. binary Huffman tree
+
+
+
+
+
+### Extension
+
+deep learning tutorial:
+
+http://ufldl.stanford.edu/tutorial/
+
+others find~~~:
+
+*The best tutorials I found online were done by [Alex Minnaar](http://alexminnaar.com/).*
+
+*He’s since taken the tutorials down, but I have PDF copies here:*
+
+- [Part I - The Skip-Gram Model](http://mccormickml.com/assets/word2vec/Alex_Minnaar_Word2Vec_Tutorial_Part_I_The_Skip-Gram_Model.pdf)
+- [Part II - Continuous Bag-of-Words Model](http://mccormickml.com/assets/word2vec/Alex_Minnaar_Word2Vec_Tutorial_Part_II_The_Continuous_Bag-of-Words_Model.pdf)
