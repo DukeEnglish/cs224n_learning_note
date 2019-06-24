@@ -19,8 +19,9 @@ GloVe consists of weighted least squares model that trains on global word-word c
 
 ## 2.2 video and slides
 
-- GD
-- SGD
+- GD：所有的数据过一遍进行更新
+- SGD：sample一个window进行更新（一条数据更新一次，在我们的问题里面就是一个window一次）
+- mini-batch：一个batch的数据的进行更新
 
 
 
