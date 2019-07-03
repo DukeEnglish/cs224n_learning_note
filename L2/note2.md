@@ -13,6 +13,10 @@
 
 ### 2.1.1 GloVe
 
+由于之前提到的模型一个是基于计数和矩阵因式分解的，它们有效地利用了全局统计信息，但是主要时候捕捉了词相似度，但是在词语推理上表现一般，这说明它达到了局部最优向量空间结构。
+另一个是基于浅层窗口的（skip-gram 以及 CBOW）方法，这些方法尽管不住红了语法规则，但是却不能利用全局共现统计信息。
+GloVe利用了权重最小二乘法，利用到了全局的信息，所以就有效的利用到了统计信息。其产生了意义丰富的向量空间子结构。【简单来说，skig-gram混合CBOW都是基于一个窗口去预测，但是GloVe是基于给定全文去 预测的。】
+
 GloVe consists of weighted least squares model that trains on global word-word co-occurrence counts and thus makes efficient use of statistics.
 
 
