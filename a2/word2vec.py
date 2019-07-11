@@ -17,7 +17,7 @@ def sigmoid(x):
     """
 
     ### YOUR CODE HERE
-
+    s = 1 / (1+exp(-x))
     ### END YOUR CODE
 
     return s
@@ -53,11 +53,21 @@ def naiveSoftmaxLossAndGradient(
     """
 
     ### YOUR CODE HERE
-
     ### Please use the provided softmax function (imported earlier in this file)
     ### This numerically stable implementation helps you avoid issues pertaining
     ### to integer overflow. 
+    score = np.dot(outsideVectors, centerWordVec)
+    y_hat = softmax(score)
+    loss = -np.log(y_hat[outsideWordIdx]) # u_o 位置的损失
+    ### 求导的结果
 
+    y = np.eye(y_hat.shape[0])[outsideWordIdx]
+    diff = (y_h-y).reshape((y.shape[0],1)) # 
+
+    gradCenterVec = np.dot(diff.T,outsideVectors)
+    centerWordVec = centerWordVec.reshape((1,centerWordVec.shape[0]))
+    gradOutsideVecs = np.dot(diff,centerWordVec)
+    
 
     ### END YOUR CODE
 
@@ -103,6 +113,12 @@ def negSamplingLossAndGradient(
     indices = [outsideWordIdx] + negSampleWordIndices
 
     ### YOUR CODE HERE
+    loss = 
+
+    gradCenterVec = 
+
+    gradOutsideVecs
+
 
     ### Please use your implementation of sigmoid in here.
 
@@ -148,6 +164,11 @@ def skipgram(currentCenterWord, windowSize, outsideWords, word2Ind,
     gradOutsideVectors = np.zeros(outsideVectors.shape)
 
     ### YOUR CODE HERE
+    loss
+
+    gradCenterVecs
+    
+    gradOutsideVectors
 
     ### END YOUR CODE
 

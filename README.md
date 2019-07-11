@@ -15,6 +15,10 @@ Usually, I study in the evening to ensure I have enough time.
 
 *This schedule is subject to change*.
 
+All the material could be found [here](https://github.com/zhanlaoban/CS224N-Stanford-Winter-2019)
+
+
+
 |        Date | Description                                                  | Course Materials                                             | Events                                                       | Deadlines                                                    | Note |
 | ----------: | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | ---- |
 | Tue June 19 | Introduction and Word Vectors  [[slides](http://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture01-wordvecs1.pdf)] [[video](https://youtu.be/8rXD5-xhemo)] [[notes](http://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes01-wordvecs1.pdf)]   Gensim word vectors example:  [[code](http://web.stanford.edu/class/cs224n/materials/Gensim.zip)] [[preview](http://web.stanford.edu/class/cs224n/materials/Gensim word vector visualization.html)] | Suggested Readings:[Word2Vec Tutorial - The Skip-Gram Model](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)[Efficient Estimation of Word Representations in Vector Space](http://arxiv.org/pdf/1301.3781.pdf)(original word2vec paper)[Distributed Representations of Words and Phrases and their Compositionality](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) (negative sampling paper) | Assignment 1 **out**  [[code](http://web.stanford.edu/class/cs224n/assignments/a1.zip)] [[preview](http://web.stanford.edu/class/cs224n/assignments/a1_preview/exploring_word_vectors.html)] |                                                              | done |
@@ -41,3 +45,13 @@ Usually, I study in the evening to ensure I have enough time.
 |  Thu Aug 22 | Future of NLP + Deep Learning  [[slides](http://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture20-future.pdf)] [[video](https://youtu.be/3wWZBGN-iX8)] |                                                              |                                                              |                                                              |      |
 |  Sun Aug 24 |                                                              |                                                              |                                                              | **Final Project Report due**[[instructions](http://web.stanford.edu/class/cs224n/project/project-report-instructions.pdf)] |      |
 |  Wed Aug 28 | **Final project poster session**  [[details](https://www.facebook.com/events/1218481914969541)] | 5:15 - 8:30pm  McCaw Hall at the Alumni Center [[map](https://alumni.stanford.edu/get/page/resources/alumnicenter/directions)] |                                                              | **Project Poster/Video due**[[instructions](http://web.stanford.edu/class/cs224n/project/project-postervideo-instructions.pdf)] |      |
+
+
+
+Reference:
+
+1. https://github.com/ankit-ai/cs224n-natural-language-processing-winter2019
+2. https://github.com/ZacBi/CS224n-2019-solutions
+3. https://blog.csdn.net/bqw18744018044/article/details/83120425
+4. https://github.com/Observerspy/CS224n
+
