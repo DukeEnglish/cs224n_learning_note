@@ -86,7 +86,7 @@ first two is just equal to two equation mentioned in the question and the other 
 
 ## part 2
 
-refer to code
+refer to code file
 
 
 
@@ -96,6 +96,7 @@ reference:
 2. https://github.com/ZacBi/CS224n-2019-solutions
 3. https://blog.csdn.net/bqw18744018044/article/details/83120425
 4. https://github.com/Observerspy/CS224n/blob/master/assignment2/assignment2-soln.pdf
+5. 
 
 
 
