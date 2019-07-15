@@ -60,6 +60,7 @@ def naiveSoftmaxLossAndGradient(
     y_hat = softmax(score)
     loss = -np.log(y_hat[outsideWordIdx]) # u_o 位置的损失
     ### 求导的结果
+    ### transform of dimentions
 
     y = np.eye(y_hat.shape[0])[outsideWordIdx]
     diff = (y_h-y).reshape((y.shape[0],1)) # 
