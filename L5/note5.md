@@ -16,3 +16,5 @@ This video is about syntax parsing, dependency grammar and the way to parse them
 **- We need to know what is connected to what** 
 
 - Part2 is about Dependency Grammar and Treebank. They are two different 
+
+"""I'd like to complete it after reading the note for this lecture""

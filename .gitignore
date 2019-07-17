@@ -3,3 +3,4 @@ runs/
 /data/cnews/
 .ipynb_checkpoints/
 .DS_Store
+*.pyc
