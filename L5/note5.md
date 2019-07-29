@@ -18,3 +18,14 @@ This video is about syntax parsing, dependency grammar and the way to parse them
 - Part2 is about Dependency Grammar and Treebank. They are two different 
 
 """I'd like to complete it after reading the note for this lecture""
+
+
+句法分析例子：
+例子来源：http://ltp.ai/demo.html
+标注：https://ltp.readthedocs.io/zh_CN/latest/appendix.html#id5
+1、元芳你怎么看
+Root 元芳 你 怎么 看
+按照数组来组织，每一个token都是一个index，所以会有如下的结果输出
+<space> 4:SBV	4:SBV	4:ADV	0:HED
+4:SBV：4代表第四个位置的token对这个位置【4:SBV所在的位置】的关系，是SBV关系：subject-verb，主谓关系。
+0:HED：指这个位置的词语是整个句子的核心
