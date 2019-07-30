@@ -1,15 +1,35 @@
 ### 1. Machine Learning & Neural Networks
 
+Added material:
+
+[saddle point](https://blog.csdn.net/baidu_27643275/article/details/79250537) this is Chinese version. For English, pls check on wiki
+
+# [Challenges for mini-batch GD](http://ruder.io/optimizing-gradient-descent/index.html#fn2)
+
+Vanilla mini-batch gradient descent, however, does not guarantee good convergence, but offers a few challenges that need to be addressed:
+
+- Choosing a proper learning rate can be difficult. A learning rate that is too small leads to painfully slow convergence, while a learning rate that is too large can hinder convergence and cause the loss function to fluctuate around the minimum or even to diverge.
+- Learning rate schedules [[1\]](http://ruder.io/optimizing-gradient-descent/index.html#fn1) try to adjust the learning rate during training by e.g. annealing, i.e. reducing the learning rate according to a pre-defined schedule or when the change in objective between epochs falls below a threshold. These schedules and thresholds, however, have to be defined in advance and are thus unable to adapt to a dataset's characteristics [[2\]](http://ruder.io/optimizing-gradient-descent/index.html#fn2).
+- Additionally, the same learning rate applies to all parameter updates. If our data is sparse and our features have very different frequencies, we might not want to update all of them to the same extent, but perform a larger update for rarely occurring features.
+- Another key challenge of minimizing highly non-convex error functions common for neural networks is avoiding getting trapped in their numerous suboptimal local minima. Dauphin et al. [[3\]](http://ruder.io/optimizing-gradient-descent/index.html#fn3) argue that the difficulty arises in fact not from local minima but from saddle points, i.e. points where one dimension slopes up and another slopes down. These saddle points are usually surrounded by a plateau of the same error, which makes it notoriously hard for SGD to escape, as the gradient is close to zero in all dimensions.
+
+*Above are the main reason why we have to learn things like Adam-optimizer and also why they were argued.*
+
 #### A. Adam optimizer
 
-1. Momentum :
+1. Q：**how using m stops the updates from varying as much and why this low variance may be helpful to learning, overall.**
+
+   Momentum :
 
 - The momentum term **increases** for dimensions whose **gradients point in the same directions** and reduces updates for dimensions whose gradients change directions 
   - 动量可以让和上一个timestep**方向一致**的梯度正常增加，而**不一致**的梯度的更新变小
-- Gain faster convergence and reduced oscillation
+- Gain faster convergence and reduced oscillation. 
   - 可以使模型更快收敛并且减少震荡
+    - note：Essentially, when using momentum, we push a ball down a hill. The ball accumulates momentum as it rolls downhill, becoming faster and faster on the way (until it reaches its terminal velocity if there is air resistance, i.e. γ<1γ<1). The same thing happens to our parameter updates: The momentum term increases for dimensions whose gradients point in the same directions and reduces updates for dimensions whose gradients change directions. As a result, we gain faster convergence and reduced oscillation. 【I privately think this is a vivid description how momentum works】
 
 2. Adaptive learning rate:
+
+   从公式上我们可以看到，梯度越大的参数，相应的v越大，那么更新就越小。为什么这个策略有效呢？
 
 - Used to **normalize** the parameter update step, element wise
 - Weights that receive high gradients will have their effective learning rate reduced
