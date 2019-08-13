@@ -1,6 +1,8 @@
 # cs224n_learning_note
 我会将自己的学习笔记以及相关资料都放在这里。时间表安排将会按照斯坦福的时间安排进行。开始时间为2019.6.19
 
+表示我没有做A3.我实在是对这部分内容不太感冒。挣扎了两个礼拜，每次打开就放弃了。后来我想起我也没有在上课，就不做了。随他去吧。我要去做A4了。a5看心情。主要是我要把final做出来
+
 http://web.stanford.edu/class/cs224n/
 
 The timetable is in Schedule.md
