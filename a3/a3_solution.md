@@ -37,8 +37,12 @@ Vanilla mini-batch gradient descent, however, does not guarantee good convergenc
 
 #### B. Dropout
 - $\gamma$ = 1/p for scaling output on training (Not sure)
-- Dropout in training but not in testing :
-    - At test time all neurons see all their inputs, so we want the outputs of neurons at test time to be identical to their expected outputs at training time
+
+- Dropout in training but not in evaluating :
+    
+    因为在评估的时候，我们想要尽可能的使用输入的信息做判断。如果在这个时候做了drop，那就相当于传递到这个神经元的信息损失了。
+    
+    况且在训练的时候进行drop，意义在于不学习到过多的训练数据的信息以免overfitting
 
 ### Prob 2. Neural Transition-Based dependency parsing
 #### A. Parsing a sentence
