@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5703f8c1-d8a3-4a9e-ac7c-77718a3df50d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../model_embeddings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../model_embeddings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nmt_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nmt_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nmt_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/nmt_model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,23 +13,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nmt_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="342" column="47" lean-forward="true" selection-start-line="342" selection-start-column="47" selection-end-line="342" selection-end-column="47" />
-              <folding>
-                <element signature="e#176#210#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
               <caret line="28" column="16" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nmt_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="393" column="10" lean-forward="true" selection-start-line="393" selection-start-column="10" selection-end-line="393" selection-end-column="10" />
+              <folding>
+                <element signature="e#176#210#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,8 +117,8 @@
       <find>F</find>
       <find>F.</find>
       <find>gener</find>
-      <find>epoch</find>
       <find>enc_masks</find>
+      <find>epoch</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,14 +198,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16918188" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.49178082" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.23561645" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -310,8 +308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nmt_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="342" column="47" lean-forward="true" selection-start-line="342" selection-start-column="47" selection-end-line="342" selection-end-column="47" />
+        <state relative-caret-position="302">
+          <caret line="393" column="10" lean-forward="true" selection-start-line="393" selection-start-column="10" selection-end-line="393" selection-end-column="10" />
           <folding>
             <element signature="e#176#210#0" expanded="true" />
           </folding>
