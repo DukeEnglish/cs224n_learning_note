@@ -14,6 +14,7 @@ import torch.nn as nn
 class ModelEmbeddings(nn.Module): 
     """
     Class that converts input words to their embeddings.
+    id
     """
     def __init__(self, embed_size, vocab):
         """
@@ -46,11 +47,15 @@ class ModelEmbeddings(nn.Module):
         ###             `len(vocab.<specific_vocabulary>)`
         ###     3. Remember to include the padding token for the specific vocabulary
         ###        when creating your Embedding.
+
+        ###     num_embeddings (int) – size of the dictionary of embeddings. The size of embedding dict [means vocab size] not the w2v size[ not there yet]. 
+        ###     embedding_dim (int) – the size of each embedding vector
         ###
         ### Use the following docs to properly initialize these variables:
         ###     Embedding Layer:
         ###         https://pytorch.org/docs/stable/nn.html#torch.nn.Embedding
-        
+        self.source = nn.Embedding(len(vocab.src),self.embed_size,src_pad_token_idx)
+        self.target = nn.Embedding(len(vocab.tgt),self.embed_size,tgt_pad_token_idx)
 
         ### END YOUR CODE
 

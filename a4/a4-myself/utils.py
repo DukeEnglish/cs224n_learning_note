@@ -27,12 +27,12 @@ def pad_sents(sents, pad_token):
         each sentences in the batch now has equal length.
     """
     sents_padded = []
-
     ### YOUR CODE HERE (~6 Lines)
-
-
+    max_len = max([len(i) for i in sents])
+    for line in sents:
+        line+=list(np.ones(max_len - len(line))*pad_token)
+        sents_padded.append(line)
     ### END YOUR CODE
-
     return sents_padded
 
 
@@ -69,10 +69,13 @@ def batch_iter(data, batch_size, shuffle=False):
     for i in range(batch_num):
         indices = index_array[i * batch_size: (i + 1) * batch_size]
         examples = [data[idx] for idx in indices]
+        # (print(examples))
 
         examples = sorted(examples, key=lambda e: len(e[0]), reverse=True)
         src_sents = [e[0] for e in examples]
         tgt_sents = [e[1] for e in examples]
+        # print('src_sents', src_sents)
+        # print(len(src_sents))
 
         yield src_sents, tgt_sents
 
